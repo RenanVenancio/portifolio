@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #3a3a5f; /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    #3a3a5f 0%,
+    #140101 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    #3a3a5f 0%,
+    #140101 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    #3a3a5f 0%,
+    #140101 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a5f', endColorstr='#140101',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .brand img {
+  width: 128px;
+}
+
+.navbar .nav-items li {
+  list-style: none;
+  font-size: 1.2em;
+  display: inline;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar .nav-items li:hover {
+  list-style: none;
+  cursor: pointer;
+  border-bottom: solid 4px;
+  border-color: #f71467;
+  transition: all 0.5s;
+}
+
+.navbar .nav-items {
+  display: flex;
+  flex-direction: row;
+  margin-right: 16px;
+}
