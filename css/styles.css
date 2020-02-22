@@ -67,6 +67,8 @@ html {
 .navbar .nav-items li:hover {
   list-style: none;
   cursor: pointer;
+  background-color:rgba(255, 255, 255, 0.158);
+  color: #f71467;
   border-bottom: solid 4px;
   border-color: #f71467;
   transition: all 0.5s;
@@ -76,4 +78,46 @@ html {
   display: flex;
   flex-direction: row;
   margin-right: 16px;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+
+}
+
+.img-circle{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+ }
+
+ .img-circle img{
+  width: 200px;
+
+ }
+
+ .about{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: #FFF;
+ }
+
+ .about .social{
+   margin-top: 5px;
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+ }
+
+ .about .social i{
+  font-size: 1.5rem;
+  
 }
