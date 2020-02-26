@@ -1,38 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Renan</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></head>
-<body>
-    <nav class="navbar">
-        <a class="brand" href="#">
-            <img class="brand" src="/img/logo.svg" alt="logo">
-        </a>
-        <div class="nav-items">
-            <ul>
-                <li>Inicio</li>
-                <li>Sobre</li>
-                <li>Currículo</li>
-                <li>Contato</li>
-            </ul>
-        </div>
-    </nav>
-    <div class="content">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link href="/libs/viewerjs/dist/viewer.min.css" rel="stylesheet" />
+  </head>
 
-        <article class="about">
-            <div class="img-circle">
-                <img src="/img/pht.jpg" alt="photo">
-            </div>
-            <h3>Desenvolvedor Web Fullstack</h3>
-            <span class="social">
-                <i class="fa fa-github"></i>
-                <i class="fa fa-linkedin"></i>
-                <i class="fa fa-whatsapp"></i>     
-            </span>
-        </article>
+  <body>
+    <nav class="navbar fixed">
+      <a class="brand" href="#">
+        <img class="brand" src="/img/logo.svg" alt="logo" />
+      </a>
+      <div class="nav-items">
+        <ul>
+          <li id="home">Inicio</li>
+          <li id="about">Sobre</li>
+          <li id="projects">Projetos</li>
+          <li>Contato</li>
+        </ul>
+      </div>
+      <label class="nav-btn" for="bt-menu">
+        <input id="bt-menu" type="checkbox" />
+        <i class="fa fa-bars"></i>
+      </label>
+    </nav>
+    <div class="content mt-50 flex-center">
+      <article class="about">
+        <div class="img-circle">
+          <img src="/img/pht.jpg" alt="photo" />
+        </div>
+        <h2 class="text-center white">Olá, Me chamo Renan sou</h2>
+        <h3 class="danger">
+          < Desenvolvedor Web />
+        </h3>
+        <span class="social white">
+          <a href="https://github.com/RenanVenancio"
+            ><i class="fa fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/renanven%C3%A2ncio/"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5583991493461"
+            ><i class="fa fa-whatsapp"></i
+          ></a>
+        </span>
+        <button class="btn-danger rounded-pill mt-15" type="button">
+          Projetos
+        </button>
+      </article>
     </div>
-</body>
+
+    <div class="content">
+      <article class="projects">
+        <div class="content-head">
+          <h1>Projetos</h1>
+        </div>
+        <div class="gallery">
+          <div class="text-center">
+            <h3>SGO - Gerencia de Ocorrências</h3>
+            <div class="images" id="images">
+              <img src="/img/projects/sgo/sgologin.png" alt="Tela de Login" />
+  
+              <img src="/img/projects/sgo/sgochamados.png" alt="Chamados" />
+  
+              <img src="/img/projects/sgo/sgodash.png" alt="Dashboard" />
+  
+              <img src="/img/projects/sgo/sgodash2.png" alt="Dashboard-2" />
+            </div>
+
+          </div>
+
+          <div class="text-center">
+            <h2>SGO</h2>
+            <div class="images" id="images">
+              <img src="/img/projects/sgo/sgologin.png" alt="Picture 3" />
+  
+              <img src="/img/projects/sgo/sgochamados.png" alt="Picture 1" />
+  
+              <img src="/img/projects/sgo/sgodash.png" alt="Picture 1" />
+  
+              <img src="/img/projects/sgo/sgodash2.png" alt="Picture 2" />
+            </div>
+
+          </div>
+
+        </div>
+      </article>
+    </div>
+    <script src="/libs/viewerjs/dist/viewer.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
 </html>
