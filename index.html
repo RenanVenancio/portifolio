@@ -21,9 +21,9 @@
       </a>
       <div class="nav-items">
         <ul>
-          <li id="home">Inicio</li>
+          <li id="home" onclick="gotoHome();">Inicio</li>
           <li id="about">Sobre</li>
-          <li id="projects">Projetos</li>
+          <li id="projects" onclick="gotoProjects();">Projetos</li>
           <li>Contato</li>
         </ul>
       </div>
@@ -52,9 +52,9 @@
             ><i class="fa fa-whatsapp"></i
           ></a>
         </span>
-        <button class="btn-danger rounded-pill mt-15" type="button">
-          Projetos
-        </button>
+        <a onclick="gotoProjects();" class="btn-danger rounded-pill animated mt-15" type="button">
+          <i class="fa fa-chevron-down"></i>
+        </a>
       </article>
     </div>
 
