@@ -21,9 +21,9 @@
       </a>
       <div class="nav-items">
         <ul>
-          <li id="home" onclick="gotoHome();">Inicio</li>
+          <li id="home about" onclick="gotoHome();">Inicio</li>
           <li id="about">Sobre</li>
-          <li id="projects" onclick="gotoProjects();">Projetos</li>
+          <li id="projects" onclick="goto('projects');">Projetos</li>
           <li>Contato</li>
         </ul>
       </div>
@@ -33,7 +33,7 @@
       </label>
     </nav>
     <div class="content mt-50 flex-center">
-      <article class="about">
+      <article class="home">
         <div class="img-circle">
           <img src="/img/pht.jpg" alt="photo" />
         </div>
@@ -57,7 +57,7 @@
           class="btn-danger rounded-pill animated mt-15"
           type="button"
         >
-          <i class="fa fa-chevron-down"></i>
+          Projetos
         </a>
       </article>
     </div>
@@ -78,7 +78,7 @@
               <div><img class="hidden" src="/img/projects/sgo/sgodash.png" alt="Dashboard" /></div>
 
               <div><img class="hidden" src="/img/projects/sgo/sgodash2.png" alt="Dashboard-2" /></div>
-              <span class="info" expanded="false">
+              <span class="info hide" expanded="false">
                 <p>
                   O sistema realiza o gerenciamento e acompanhamento de
                   ocorrências em edifícios já construídos. Sistema 100% Web, sui
@@ -111,7 +111,7 @@
 
               <div><img class="hidden" src="/img/projects/dev-radar/mobile.jpg" alt="Mobile" /></div>
 
-              <span class="info" expanded="false">
+              <span class="info hide">
                 <p>
                   A aplicação busca por desenvolvedores que trabalham com certa tecnologia
                   e exibe sua localização no mapa de acordo com sua proximidade.

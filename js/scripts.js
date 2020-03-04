@@ -26,13 +26,13 @@ menuContent.addEventListener("click", function(evt) {
   }
 });
 
-let projects = document.querySelector(".projects");
-function gotoProjects() {
+function goto(section) {
+  let item = document.querySelector(`.${section}`);
   if (screen.width <= 600) {
-    window.scrollTo(0, projects.offsetTop);
+    window.scrollTo(0, item.offsetTop);
   } else if (screen.width > 600) {
-    window.scrollTo(0, projects.offsetTop - 77);
-    console.log(projects.offsetTop);
+    window.scrollTo(0, item.offsetTop - 77);
+    console.log(item.offsetTop);
   }
 }
 
@@ -41,32 +41,30 @@ function gotoHome() {
 }
 
 let images = document.querySelectorAll('.images');
-
 images.forEach(i => {
   new Viewer(i, {
     inline: false
   });
 })
 
-const viewer = new Viewer(document.getElementById("images"), {
-  inline: false
-});
 
 
 function showDetailsProject(projectName){
-  let project = document.querySelector(`#${projectName} .info`);
+  let info = document.querySelector(`#${projectName} .info`);
   let button = document.querySelector(`#${projectName} button i`);
 
-  if (project.getAttribute('expanded') == 'false'){
-    project.style.display = 'inline';
+  if(info.classList.contains('hide')){
+    info.classList.remove('hide')
+    info.classList.add('show')
+
     button.classList.remove('fa-plus') 
-    button.classList.add('fa-minus');    
-    project.setAttribute('expanded', 'true');
-  }else{
-    project.style.display = 'none';
-    project.style.transition = "all 2s";
+    button.classList.add('fa-minus');  
+  }else if(info.classList.contains('show')){
+    info.classList.remove('show')
+    info.classList.add('hide')
+
     button.classList.remove('fa-minus');
     button.classList.add('fa-plus') 
-    project.setAttribute('expanded', 'false');
   }
+
 }
