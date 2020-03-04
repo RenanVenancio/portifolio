@@ -52,7 +52,11 @@
             ><i class="fa fa-whatsapp"></i
           ></a>
         </span>
-        <a onclick="gotoProjects();" class="btn-danger rounded-pill animated mt-15" type="button">
+        <a
+          onclick="gotoProjects();"
+          class="btn-danger rounded-pill animated mt-15"
+          type="button"
+        >
           <i class="fa fa-chevron-down"></i>
         </a>
       </article>
@@ -64,34 +68,72 @@
           <h1>Projetos</h1>
         </div>
         <div class="gallery">
-          <div class="text-center">
-            <h3>SGO - Gerencia de Ocorrências</h3>
+          <div class="project-box" id="project-sgo">
             <div class="images" id="images">
-              <img src="/img/projects/sgo/sgologin.png" alt="Tela de Login" />
-  
-              <img src="/img/projects/sgo/sgochamados.png" alt="Chamados" />
-  
-              <img src="/img/projects/sgo/sgodash.png" alt="Dashboard" />
-  
-              <img src="/img/projects/sgo/sgodash2.png" alt="Dashboard-2" />
-            </div>
+              <h3>SGO - Gerencia de Ocorrências</h3>
+              <div><img src="/img/projects/sgo/sgologin.png" alt="Tela de Login" /></div>
 
+              <div><img class="hidden" src="/img/projects/sgo/sgochamados.png" alt="Chamados" /></div>
+
+              <div><img class="hidden" src="/img/projects/sgo/sgodash.png" alt="Dashboard" /></div>
+
+              <div><img class="hidden" src="/img/projects/sgo/sgodash2.png" alt="Dashboard-2" /></div>
+              <span class="info" expanded="false">
+                <p>
+                  O sistema realiza o gerenciamento e acompanhamento de
+                  ocorrências em edifícios já construídos. Sistema 100% Web, sui
+                  uma API para integração com outros sistemas.
+                </p>
+                <div class="techs">
+                  <small>Tecnologias</small><br />
+                  <span class="badge-danger rounded-pill">Django</span>
+                  <span class="badge-danger rounded-pill">Django-rest</span>
+                  <span class="badge-danger rounded-pill">HTML</span>
+                  <span class="badge-danger rounded-pill">CSS</span>
+                  <span class="badge-danger rounded-pill">JS</span>
+                  <span class="badge-danger rounded-pill">Mysql</span>
+                </div>
+              </span>
+            </div>
+            <button
+              onclick="showDetailsProject('project-sgo')"
+              class="btn-group-bottom btn-danger"
+            >
+              <i class="fa fa-plus"></i>
+              Informações
+            </button>
           </div>
 
-          <div class="text-center">
-            <h2>SGO</h2>
+          <div class="project-box" id="pp">
             <div class="images" id="images">
-              <img src="/img/projects/sgo/sgologin.png" alt="Picture 3" />
-  
-              <img src="/img/projects/sgo/sgochamados.png" alt="Picture 1" />
-  
-              <img src="/img/projects/sgo/sgodash.png" alt="Picture 1" />
-  
-              <img src="/img/projects/sgo/sgodash2.png" alt="Picture 2" />
+              <h3>Dev Radar</h3>
+              <div><img src="/img/projects/dev-radar/dr-cadastro.png" alt="dr-cadastro" /></div>
+
+              <div><img class="hidden" src="/img/projects/dev-radar/mobile.jpg" alt="Mobile" /></div>
+
+              <span class="info" expanded="false">
+                <p>
+                  A aplicação busca por desenvolvedores que trabalham com certa tecnologia
+                  e exibe sua localização no mapa de acordo com sua proximidade.
+                  O projeto consome a API do github.
+                </p>
+                <div class="techs">
+                  <small>Tecnologias</small><br />
+                  <span class="badge-danger rounded-pill">JS</span>
+                  <span class="badge-danger rounded-pill">React</span>
+                  <span class="badge-danger rounded-pill">NodeJS</span>
+                  <span class="badge-danger rounded-pill">MongoDB</span>
+                </div>
+              </span>
             </div>
-
+            <button
+              onclick="showDetailsProject('pp')"
+              class="btn-group-bottom btn-danger"
+            >
+              <i class="fa fa-plus"></i>
+              Informações
+            </button>
           </div>
-
         </div>
       </article>
     </div>

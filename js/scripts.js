@@ -40,12 +40,33 @@ function gotoHome() {
   window.scrollTo(0, 0);
 }
 
-// View an image
+let images = document.querySelectorAll('.images');
+
+images.forEach(i => {
+  new Viewer(i, {
+    inline: false
+  });
+})
+
 const viewer = new Viewer(document.getElementById("images"), {
   inline: false
 });
-// Then, show the image by click it, or call `viewer.show()`.
 
-// View a list of images
-const gallery = new Viewer(document.getElementById("images"));
-// Then, show one image by click it, or call `gallery.show()`.
+
+function showDetailsProject(projectName){
+  let project = document.querySelector(`#${projectName} .info`);
+  let button = document.querySelector(`#${projectName} button i`);
+
+  if (project.getAttribute('expanded') == 'false'){
+    project.style.display = 'inline';
+    button.classList.remove('fa-plus') 
+    button.classList.add('fa-minus');    
+    project.setAttribute('expanded', 'true');
+  }else{
+    project.style.display = 'none';
+    project.style.transition = "all 2s";
+    button.classList.remove('fa-minus');
+    button.classList.add('fa-plus') 
+    project.setAttribute('expanded', 'false');
+  }
+}
