@@ -314,6 +314,10 @@ html {
   margin-top: 5px;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
 .mt-15 {
   margin-top: 15px;
 }
@@ -461,6 +465,10 @@ small {
   opacity: 0;
   pointer-events: none;
   transition: all 0.6s ease-out;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .show {
