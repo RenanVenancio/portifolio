@@ -1,16 +1,7 @@
 let navBtn = document.querySelector(".nav-btn");
 let btMenuCheckbox = document.querySelector(".nav-btn input");
 let menuContent = document.querySelector(".navbar > .nav-items");
-var body = document.getElementsByTagName("body");
-
-window.addEventListener("resize", function() {
-  if (window.innerWidth > 600) {
-    menuContent.style.visibility = "visible";
-    openMenu();
-  } else {
-    closeMenu();
-  }
-});
+var body = document.getElementsByTagName('body')
 
 navBtn.addEventListener("click", function(evt) {
   if (btMenuCheckbox.checked) {
@@ -21,10 +12,10 @@ navBtn.addEventListener("click", function(evt) {
 });
 
 function closeMenu() {
-  if (window.innerWidth <= 600) {
+  console.log(body.width)
+  if (screen.width <= 600) {
     menuContent.style.visibility = "hidden";
     menuContent.style.opacity = 0;
-    btMenuCheckbox.checked = false;
   }
 }
 
@@ -34,7 +25,8 @@ function openMenu() {
 }
 
 menuContent.addEventListener("click", function(evt) {
-  closeMenu();
+  console.log('cliii')
+    closeMenu();
 });
 
 function goto(section) {
