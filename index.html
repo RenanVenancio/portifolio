@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Renan</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <link href="libs/viewerjs/dist/viewer.min.css" rel="stylesheet" />
@@ -30,29 +31,121 @@
   <div class="content mt-50 flex-center">
     <article class="home">
       <div class="img-circle">
-        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGyijG2BENgvg/profile-displayphoto-shrink_800_800/0/1642458353039?e=1648080000&v=beta&t=PrUn_Q14OFkSAR-4llPsO7y8bXA0ZJ9OpRTBvyApmrs" alt="photo" />
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C4D03AQGyijG2BENgvg/profile-displayphoto-shrink_800_800/0/1642458353039?e=1648080000&v=beta&t=PrUn_Q14OFkSAR-4llPsO7y8bXA0ZJ9OpRTBvyApmrs"
+          alt="photo" />
       </div>
-      <h2 class="text-center white">Olá, Me chamo Renan sou</h2>
-      <h3 class="danger">
-        < Desenvolvedor Web />
+      <h2 class="text-center danger">Olá, Me chamo Renan sou</h2>
+      <h3 class="white" id="dev-web">
+
       </h3>
-      <span class="social white">
-        <a href="https://github.com/RenanVenancio"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/renanven%C3%A2ncio/"><i class="fa fa-linkedin"></i></a>
-        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5583991493461"><i class="fa fa-whatsapp"></i></a>
+      <span class="social">
+        <a href="https://github.com/RenanVenancio"><i class="white fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/renanven%C3%A2ncio/"><i class="white fa fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5583991493461"><i class="white fa fa-whatsapp"></i></a>
       </span>
-      <a onclick="goto('projects');" class="btn-danger rounded-pill animated mt-15" type="button">
-        Projetos
-      </a>
+      <span class="floating-bottom" id="floating-session">
+        <a onclick="goto('projects');" class="btn-outline-white rounded-pill animated mt-15" type="button">
+          Projetos
+        </a>
+      </span>
     </article>
   </div>
 
-  <div class="content">
+  <div style="background-color: #292929">
     <article class="projects">
-      <div class="content-head">
-        <h1>Projetos</h1>
+      <div class="content-head row">
+        <h1 style="margin: 10px;" class="white">Projetos</h1>
       </div>
       <div class="gallery">
+        <div class="project-box" id="project-digi">
+          <div class="images" id="images">
+            <h3>Digi - Catálogo Digital</h3>
+            <div><img src="img/projects/digi/digi-1.png" alt="digi-1" /></div>
+            <div><img class="hidden" src="img/projects/digi/digi-2.png" alt="digi-2" /></div>
+            <div><img class="hidden" src="img/projects/digi/digi-3.png" alt="digi-3" /></div>
+            <div><img class="hidden" src="img/projects/digi/digi-4.png" alt="digi-4" /></div>
+            <div><img class="hidden" src="img/projects/digi/digi-5.png" alt="digi-5" /></div>
+            <div><img class="hidden" src="img/projects/digi/digi-6.png" alt="digi-6" /></div>
+            <div><img class="hidden" src="img/projects/digi/digi-7.png" alt="digi-7" /></div>
+            <div><img class="hidden" src="img/projects/digi/digi-8.png" alt="digi-8" /></div>
+            <span class="info hide">
+              <p>
+                Trata-se de uma plataforma de cardápio/catálogo digital, onde as empresas podem compartilhar o link da
+                sua loja em uma mídia social, como WhatsApp, Instagram, etc, e seus clientes podem acessar seus
+                catálogos através do link e realizar os pedidos on-line.
+                Foi desenvolvida também a área administrativa, onde a empresa pode consultar seus pedidos, cadastrar
+                produtos, categorias, e visualizar alguns relatórios.
+
+                Toda a comunicação da plataforma é feita através de uma API Rest, desenvolvida com spring, toda a
+                documentação foi feita com Swagger, a camada de segurança da aplicação utiliza tokens JWT.
+
+                Já no front-end utilizei o React, hooks e context api para gerenciar os estados globais, a estilização
+                deixei por conta do rainbow-ui.
+                <br>
+                <strong>Vídeo demonstrativo:
+                  <a href="https://www.youtube.com/watch?v=nH2uFTiwXUc" target="_blank"> clique aqui para acessar</a>
+                  <br /></strong>
+              </p>
+              <div class="techs">
+                <small>Tecnologias</small><br />
+                <i class="gray devicon-java-plain colored"></i>
+                <i class="devicon-spring-plain colored"></i>
+                <i class="devicon-mysql-plain colored"></i>
+                <i class="devicon-react-original colored"></i>
+              </div>
+            </span>
+          </div>
+          <button onclick="showDetailsProject('project-digi')" class="btn-group-bottom btn-danger">
+            <i class="fa fa-plus"></i>
+            Informações
+          </button>
+        </div>
+
+        <div class="project-box" id="project-finder">
+          <div class="images" id="images">
+            <h3>Finder - Plataforma para busca de pessoas desaparecidas</h3>
+            <div><img src="img/projects/finder/finder-1.png" alt="finder-1" /></div>
+            <div><img class="hidden" src="img/projects/finder/finder-2.png" alt="finder-2" /></div>
+            <div><img class="hidden" src="img/projects/finder/finder-3.png" alt="finder-3" /></div>
+            <div><img class="hidden" src="img/projects/finder/finder-4.png" alt="finder-4" /></div>
+            <div><img class="hidden" src="img/projects/finder/finder-5.png" alt="finder-5" /></div>
+            <div><img class="hidden" src="img/projects/finder/finder-6.png" alt="finder-6" /></div>
+            <div><img class="hidden" src="img/projects/finder/finder-7.png" alt="finder-7" /></div>
+            <div><img class="hidden" src="img/projects/finder/finder-8.png" alt="finder-8" /></div>
+            <div><img class="hidden" src="img/projects/finder/finder-9.png" alt="finder-9" /></div>
+
+
+            <span class="info hide">
+              <p>
+                Nos últimos meses estive realizando estudos sobre reconhecimento e detecção facial para desenvolvimento
+                do meu trabalho de conclusão de curso, decidi me aventurar no mundo da visão computacional utilizando a
+                biblioteca OpenCv e Python, os estudos envolveram também outras tecnologias como React, Django, o
+                próprio Opencv e os algoritmos de machine learning Haar Cascade e LBPH. O resultado final foi o
+                desenvolvimento de uma plataforma Web onde pode-se realizar o cadastro de pessoas desaparecidas e
+                utilizar-se do reconhecimento facial para identificar essas pessoas, e notificar familiares via e-mail
+                caso as
+                mesmas sejam encontradas.
+                <br>
+                <strong>Vídeo demonstrativo:
+                  <a href="https://www.youtube.com/watch?v=p9Tx7PsNFRg" target="_blank"> clique aqui para acessar</a>
+                  <br /></strong>
+              </p>
+              <div class="techs">
+                <small>Tecnologias</small><br />
+                <i class="gray devicon-python-plain colored"></i>
+                <i class="devicon-django-plain colored"></i>
+                <i class="devicon-mysql-plain colored"></i>
+                <i class="devicon-react-original colored"></i>
+              </div>
+            </span>
+          </div>
+          <button onclick="showDetailsProject('project-finder')" class="btn-group-bottom btn-danger">
+            <i class="fa fa-plus"></i>
+            Informações
+          </button>
+        </div>
+
         <div class="project-box" id="project-sgo">
           <div class="images" id="images">
             <h3>SGO - Gerencia de Ocorrências</h3>
@@ -71,26 +164,21 @@
               </p>
 
               <p class="text-center mt-10">
-                <strong
-                  >Clique
-                  <a
-                    href="https://sgoengenharia.herokuapp.com/"
-                    target="_blank"
-                    >aqui</a
-                  >
-                  para acessar<br
-                /></strong>
+                <strong>Clique
+                  <a href="https://sgoengenharia.herokuapp.com/" target="_blank">aqui</a>
+                  para acessar<br /></strong>
                 Usuário: <strong>root</strong><br />
                 Senha: <strong>venancio123</strong>
               </p>
               <div class="techs">
                 <small>Tecnologias</small><br />
-                <span class="badge-danger rounded-pill">Django</span>
-                <span class="badge-danger rounded-pill">Django-rest</span>
-                <span class="badge-danger rounded-pill">HTML</span>
-                <span class="badge-danger rounded-pill">CSS</span>
-                <span class="badge-danger rounded-pill">JS</span>
-                <span class="badge-danger rounded-pill">PostgreSQL</span>
+                <i class=" gray devicon-python-plain colored"></i>
+                <i class="devicon-django-plain colored"></i>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-postgresql-plain colored"></i>
+                <i class="devicon-heroku-original colored"></i>
               </div>
             </span>
           </div>
@@ -115,10 +203,10 @@
               </p>
               <div class="techs">
                 <small>Tecnologias</small><br />
-                <span class="badge-danger rounded-pill">JS</span>
-                <span class="badge-danger rounded-pill">React</span>
-                <span class="badge-danger rounded-pill">NodeJS</span>
-                <span class="badge-danger rounded-pill">MongoDB</span>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-mongodb-plain colored"></i>
+                <i class="devicon-nodejs-plain colored"></i>
               </div>
             </span>
           </div>
@@ -127,6 +215,7 @@
             Informações
           </button>
         </div>
+
       </div>
     </article>
   </div>

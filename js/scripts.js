@@ -3,7 +3,7 @@ let btMenuCheckbox = document.querySelector(".nav-btn input");
 let menuContent = document.querySelector(".navbar > .nav-items");
 var body = document.getElementsByTagName('body')
 
-navBtn.addEventListener("click", function(evt) {
+navBtn.addEventListener("click", function (evt) {
   if (btMenuCheckbox.checked) {
     openMenu();
   } else {
@@ -12,7 +12,6 @@ navBtn.addEventListener("click", function(evt) {
 });
 
 function closeMenu() {
-  console.log(body.width)
   if (screen.width <= 600) {
     menuContent.style.visibility = "hidden";
     menuContent.style.opacity = 0;
@@ -24,9 +23,8 @@ function openMenu() {
   menuContent.style.opacity = 1;
 }
 
-menuContent.addEventListener("click", function(evt) {
-  console.log('cliii')
-    closeMenu();
+menuContent.addEventListener("click", function (evt) {
+  closeMenu();
 });
 
 function goto(section) {
@@ -69,3 +67,31 @@ function showDetailsProject(projectName) {
     button.classList.add("fa-plus");
   }
 }
+
+function typeText(text, idElement, speed) {
+  var i = 0;
+  typeWriter()
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById(idElement).innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+}
+
+window.addEventListener("scroll", (event) => {
+  let scroll = this.scrollY;
+  let floatingSession = document.getElementById('floating-session');
+  if (scroll > 0) {
+    floatingSession.style.display = "none";
+  }
+  if (scroll < 40) {
+    floatingSession.style.display = "block";
+  }
+});
+
+window.onload = function () {
+  typeText('<Desenvolvedor Web/>', 'dev-web', 60);
+};
+
