@@ -27,13 +27,33 @@ menuContent.addEventListener("click", function (evt) {
   closeMenu();
 });
 
-function goto(section) {
-  let item = document.querySelector(`.${section}`);
-  if (screen.width <= 600) {
-    window.scrollTo(0, item.offsetTop);
-  } else if (screen.width > 600) {
-    window.scrollTo(0, item.offsetTop - 77);
+function countDataBase(startDate) {
+  now = new Date();
+  let diffYear = parseInt(now.getFullYear() - startDate.getFullYear());
+  let diffMonth = parseInt(now.getMonth() - startDate.getMonth());
+
+  let connective = 'e';
+
+  let yearMessage = 'anos';
+  if (diffYear == 1) {
+    yearMessage = 'ano';
+  } else if (diffYear == 0) {
+    yearMessage = '';
+    connective = '';
   }
+
+  let monthMessage = 'meses';
+  if (diffMonth == 1) {
+    monthMessage = 'mês';
+  }
+
+  return yearMessage + ' ' + diffYear + ' ' + connective + ' ' + monthMessage + ' ' + diffMonth;
+
+}
+
+function goto(section) {
+  let item = document.getElementById(section);
+  window.scrollTo({ top: item.offsetTop, behavior: 'smooth' });
   closeMenu();
 }
 
@@ -88,6 +108,13 @@ window.addEventListener("scroll", (event) => {
   }
   if (scroll < 40) {
     floatingSession.style.display = "block";
+  }
+
+  let gotoTop = document.getElementById('goto-top');
+  if (scroll > 300) {
+    gotoTop.style.display = "block";
+  } else {
+    gotoTop.style.display = "none";
   }
 });
 

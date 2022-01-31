@@ -1,9 +1,14 @@
 :root {
   --danger: #f71467;
   --danger-hover: #ff3d84;
-  --bg-color: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(33,30,30,1) 48%, rgba(18,7,7,1) 100%);
+  --bg-color: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(33, 30, 30, 1) 48%,
+    rgba(18, 7, 7, 1) 100%
+  );
   --gray: #505052;
-  --white: #FFF;
+  --white: #fff;
   --blue: #0a66c2;
   --green: #25d366;
   --orange: #fc421b;
@@ -23,6 +28,10 @@
   );
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .danger {
   color: var(--danger) !important;
 }
@@ -36,7 +45,11 @@
 }
 
 .white {
-  color: var(--white);
+  color: var(--white) !important;
+}
+
+.black {
+  color: var(--black) !important;
 }
 
 .blue {
@@ -145,7 +158,6 @@ html {
 .navbar .nav-items {
   display: flex;
   flex-direction: row;
-  margin-right: 16px;
 }
 
 @media screen and (max-width: 600px) {
@@ -175,6 +187,10 @@ html {
   .navbar .nav-btn i {
     display: inline;
     color: #fff;
+  }
+
+  .nav-items > ul {
+    padding-left: 0px;
   }
 
   .navbar .nav-items {
@@ -273,7 +289,7 @@ html {
   padding: 20px;
 }
 
-.projects {
+.session {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -426,6 +442,14 @@ html {
   margin-bottom: 15px;
 }
 
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
 .rounded-pill {
   border-radius: 20px;
 }
@@ -454,22 +478,23 @@ i {
   bottom: 2em;
 }
 
-.projects {
+.session {
   width: 100%;
 }
 
-.projects .gallery {
+.session .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  grid-template-columns: repeat(2, 6fr);
 }
 
-.projects .images div {
+.session .images div {
   overflow: hidden;
   max-width: 100%;
   max-height: 90%;
 }
 
-.projects .images img {
+.session .images img {
   max-width: 95%;
   cursor: pointer;
   padding: 5px;
@@ -478,7 +503,7 @@ i {
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.projects .project-box .images {
+.session .project-box .images {
   display: flex;
   justify-content: center;
   width: 90%;
@@ -520,6 +545,7 @@ h5,
 small {
   color: #000;
   text-align: justify;
+  margin: 12px;
 }
 
 .project-box .info {
@@ -536,7 +562,6 @@ small {
   margin: 5px;
   font-size: 1.9em;
 }
-
 
 .hidden {
   display: none;
@@ -563,6 +588,7 @@ small {
 .row {
   display: flex;
   flex-direction: row;
+  flex: 1;
 }
 
 .col {
@@ -570,15 +596,96 @@ small {
   flex-direction: column;
 }
 
+.grid-container {
+  display: grid;
+  grid-column-gap: 60px;
+  grid-row-gap: 60px;
+  grid-template-columns: repeat(4, 6fr);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.session-title {
+  border-bottom: 3px solid var(--danger);
+  padding-bottom: 10px;
+}
+
+.circle {
+  background: linear-gradient(to left, var(--white) 50%, #f7f7f7 50%);
+  font-size: 3em !important;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle > i {
+  color: var(--gray) !important;
+  margin: 10px;
+}
+
+.circle-skills {
+  background: linear-gradient(to left, var(--white) 50%, #f7f7f7 50%);
+  padding: 18px;
+  font-size: 3em !important;
+  border-radius: 100%;
+}
+
+.skill-description {
+  font-size: 1.2em;
+}
+
+.skill-text {
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+hr {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.248) !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 1055px) {
+  .col-sm {
+    flex-direction: column;
+  }
+
+  .trajetory-card-icon {
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 720px) {
-  .projects .gallery {
+  .grid-container {
+    display: grid;
+    grid-column-gap: 60px;
+    grid-row-gap: 60px;
+    grid-template-columns: repeat(3, 6fr);
+  }
+
+  .circle-skills > i {
+    font-size: 0.8em;
+  }
+  /*
+  .session .gallery {
     display: flex;
     width: 100%;
     justify-content: center;
     flex-direction: column;
   }
 
-  .projects .images img {
+  .session .images img {
     width: 50%;
     cursor: pointer;
     padding: 5px;
@@ -587,7 +694,7 @@ small {
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   }
 
-  .projects .project-box .images {
+  .session .project-box .images {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -611,5 +718,15 @@ small {
     border-radius: 0px 0px 5px 5px;
     text-align: center;
     width: 100%;
+  }
+  */
+
+  @media screen and (max-width: 500px) {
+    .grid-container {
+      display: grid;
+      grid-column-gap: 60px;
+      grid-row-gap: 60px;
+      grid-template-columns: repeat(2, 6fr);
+    }
   }
 }

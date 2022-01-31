@@ -10,6 +10,9 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <link href="libs/viewerjs/dist/viewer.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -20,7 +23,9 @@
     <div class="nav-items">
       <ul>
         <li id="home" onclick="gotoHome();">Inicio</li>
-        <li id="projects" onclick="goto('projects');">Projetos</li>
+        <li id="projects" onclick="goto('skills-session');">Skills</li>
+        <li id="projects" onclick="goto('projects-session');">Projetos</li>
+        <li id="projects" onclick="goto('target-session');">Tragetória</li>
       </ul>
     </div>
     <label class="nav-btn" for="bt-menu">
@@ -28,24 +33,24 @@
       <i class="fa fa-bars"></i>
     </label>
   </nav>
-  <div class="content mt-50 flex-center">
+  <div class="content flex-center">
     <article class="home">
       <div class="img-circle">
         <img
           src="https://media-exp1.licdn.com/dms/image/C4D03AQGyijG2BENgvg/profile-displayphoto-shrink_800_800/0/1642458353039?e=1648080000&v=beta&t=PrUn_Q14OFkSAR-4llPsO7y8bXA0ZJ9OpRTBvyApmrs"
           alt="photo" />
       </div>
-      <h2 class="text-center danger">Olá, Me chamo Renan sou</h2>
+      <h2 class="text-center danger">Olá &#128075;, Me chamo Renan sou</h2>
       <h3 class="white" id="dev-web">
 
       </h3>
       <span class="social">
-        <a href="https://github.com/RenanVenancio"><i class="white fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/renanven%C3%A2ncio/"><i class="white fa fa-linkedin"></i></a>
-        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5583991493461"><i class="white fa fa-whatsapp"></i></a>
+        <a href="https://github.com/RenanVenancio" target="_blank"><i class="white fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/renanven%C3%A2ncio/" target="_blank"><i class="white fa fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5583991493461" target="_blank"><i class="white fa fa-whatsapp"></i></a>
       </span>
       <span class="floating-bottom" id="floating-session">
-        <a onclick="goto('projects');" class="btn-outline-white rounded-pill animated mt-15" type="button">
+        <a onclick="goto('projects-session');" class="btn-outline-white rounded-pill animated mt-15" type="button">
           Projetos
         </a>
       </span>
@@ -53,9 +58,9 @@
   </div>
 
   <div style="background-color: #292929">
-    <article class="projects">
+    <article class="session" id="projects-session">
       <div class="content-head row">
-        <h1 style="margin: 10px;" class="white">Projetos</h1>
+        <h1 style="margin: 10px;" class="white session-title">Projetos</h1>
       </div>
       <div class="gallery">
         <div class="project-box" id="project-digi">
@@ -158,9 +163,10 @@
             <div><img class="hidden" src="img/projects/sgo/sgodash2.png" alt="Dashboard-2" /></div>
             <span class="info hide" expanded="false">
               <p>
-                O sistema realiza o gerenciamento e acompanhamento de
-                ocorrências em edifícios já construídos. Sistema 100% Web, sui
-                uma API para integração com outros sistemas.
+                Projeto desenvolvido durante participação no projeto de extensão Unipê, atuei na concepção do sistema e
+                desenvolvimento da API Rest para comunicação com o APP. O sistema é voltado para construtoras que
+                desejam realizar o gerenciamento e acompanhamento de ocorrências de manutenção em edifícios já
+                construídos. Sistema 100% Web, possui uma API para integração com outros sistemas.
               </p>
 
               <p class="text-center mt-10">
@@ -219,6 +225,247 @@
       </div>
     </article>
   </div>
+
+  <!--SKILLS SESSION-->
+  <div style="background-color: #292929">
+    <article class="session mt-50" id="skills-session">
+      <div class="content-head row">
+        <h1 style="margin: 10px;" class="white session-title">Skills</h1>
+      </div>
+      <div class="skills-icons-container grid-container">
+        <span class="center col">
+          <span class="center circle-skills">
+            <i class="devicon-java-plain colored"></i>
+          </span>
+          <p class="skill-description" class="skill-description">Java</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <i class="devicon-spring-plain colored"></i>
+          </span>
+          <p class="skill-description">Spring</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-python-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">Python</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-django-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">Django</p>
+        </span>
+
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-mysql-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">MySQL</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-postgresql-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">PostgreSQL</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-docker-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">Docker</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-html5-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">HTML</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-css3-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">CSS</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-javascript-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">JavaScript</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-nodejs-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">NodeJS</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-react-original colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">React</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-angularjs-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">AngularJS</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-git-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">Git</p>
+        </span>
+
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-gitlab-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">GitLab</p>
+        </span>
+
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-github-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">GitHub</p>
+        </span>
+
+        <span class="center col">
+          <span class="center circle-skills">
+            <span class="center">
+              <i class="devicon-bootstrap-plain colored"></i>
+            </span>
+          </span>
+          <p class="skill-description">Bootstrap</p>
+        </span>
+      </div>
+
+    </article>
+  </div>
+
+  <!--TRAGETORIA-->
+  <div style="background-color: #292929">
+    <article class="session mt-50" id="target-session">
+      <div class="content-head row">
+        <h1 style="margin: 10px;" class="white session-title">Tragetória</h1>
+      </div>
+      <div class="skills-icons-container grid-container">
+      </div>
+      <div class="card">
+        <div class="card-body black">
+          <h3 style="margin-bottom: 50px;" class="card-title">Experiências Profissionais</h3>
+          <div class="row col-sm center">
+            <div class="col-1 text-center">
+              <i style="font-size: 2em; margin-right: 20px;" class="black fa fa-briefcase trajetory-card-icon"></i>
+            </div>
+            <div class="col">
+              <h5 style="margin-left: 0px;" class="card-title">Desenvolvedor de Software - YpControl</h5>
+              <p style="font-size: .9em;" class="black">
+                Desenvolvimento de soluções para controle financeiro como: geração de Boletos Bancários, Contratos,
+                Notas fiscais e integrações com parceiros através de APIs utilizando as tecnologias
+              </p>
+              <p class="gray">
+                De Julho de 2020 até o momento
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card-body black">
+          <div class="row col-sm center">
+            <div class="col-1 text-center">
+              <i style="font-size: 2em; margin-right: 20px;" class="black fa fa-briefcase trajetory-card-icon"></i>
+            </div>
+            <div class="col">
+              <h5 style="margin-left: 0px;" class="card-title">Extensionista em desenvolvimento de software</h5>
+              <p style="font-size: .9em;" class="black">
+                Participação no projeto de extensão Unipê em parceira com o curso de engenharia civil, onde atuei no
+                desenvolvimento de um sistema voltado para construtoras que
+                desejam realizar o gerenciamento e acompanhamento de ocorrências de manutenção em edifícios já
+                construidos,
+                atuei na concepção do
+                sistema e
+                desenvolvimento da API Rest para comunicação com o APP.
+              </p>
+              <p class="gray">
+                De Janeiro de 2019 até o Junho de 2019
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body black">
+          <h3 style="margin-bottom: 50px;" class="card-title">Educação</h3>
+          <div class="row col-sm center">
+            <div class="col-1 text-center">
+              <i style="font-size: 2em; margin-right: 20px;" class="black fa fa-graduation-cap trajetory-card-icon"></i>
+            </div>
+            <div class="col">
+              <h5 style="margin-left: 0px;" class="card-title">Graduação em Ciência da computação</h5>
+              <p style="font-size: .9em;" class="black">
+                Bacharel em ciência da computação.
+              </p>
+              <p class="gray">
+                De Janeiro de 2017 até o Junho de 2021
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </div>
+  <button id="goto-top" onclick="gotoHome();" style="position: fixed; z-index: 9999999999; bottom: 30px; right: 30px; border-radius: 100%; width: 80px; height: 80px;" type="button"
+    class="btn">
+    <i style="font-size: 2em;" class="fa fa-chevron-circle-up trajetory-card-icon"></i></button>
   <script src="libs/viewerjs/dist/viewer.min.js" type="text/javascript"></script>
   <script src="js/scripts.js" type="text/javascript"></script>
 </body>
